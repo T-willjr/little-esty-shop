@@ -7,10 +7,12 @@ Rails.application.routes.draw do
     patch "/merchants/:id/invoices/:invoice_id", to: 'merchant_invoices#update'
 
     get "/merchants/:id/items" , to: 'merchant_items#index'
+    get "/merchants/:id/items/new", to: 'merchant_items#new'
     get "/merchants/:id/items/:item_id", to: 'merchant_items#show'
     get "/merchants/:id/items/:item_id/edit", to: 'merchant_items#edit'
 
-    post '/merchants/:id/items' , to: 'merchant_items#change_status'
+    post '/merchants/:id/items' , to: 'merchant_items#create'
+    patch '/merchants/:id/items' , to: 'merchant_items#change_status'
     patch "/merchants/:id/items/:item_id", to: 'merchant_items#update'
 
     get '/merchants/:merchant_id/invoices', to: 'merchant_invoices#index'
