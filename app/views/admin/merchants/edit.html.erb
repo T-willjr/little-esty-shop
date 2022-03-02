@@ -1,0 +1,7 @@
+<h1>Edit Page</h1>
+
+<%= form_for [:admin, @merchant], local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.submit "Update Information" %>
+<% end %>
